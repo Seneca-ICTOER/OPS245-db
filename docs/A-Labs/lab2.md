@@ -5,7 +5,7 @@ sidebar_position: 4
 description: Lab 2
 ---
 
-# Lab 2: Creating and Using Virtual Machines
+# Lab 2: Creating and Using Virtual Machines test
 
 ## Lab Preparation
 
