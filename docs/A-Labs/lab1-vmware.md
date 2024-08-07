@@ -1,7 +1,6 @@
 ---
 id: lab1-vmware
 title: Lab 1 - VMware Version
-sidebar_position: 2
 description: Lab 1 - VMware Version
 ---
 
