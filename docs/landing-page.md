@@ -70,11 +70,11 @@ Most of the learning in this course occurs through the hands-on problem solving 
 ## Course Faculty
 
 **During the Winter 2024 semester, OPS245 is taught by:**
-
+---
 #![Peter Callaghan](/img/Petercallaghan.jpg)
 
 #**[Peter Callaghan](mailto:peter.callaghan@senecapolytechnic.ca)** \| Section **temp**
-
+---
 ![Hans Heim](/img/hheim.jpg)
 
 **[Hans Heim](mailto:hans.heim@senecapolytechnic.ca)** \| Section **NAA, NBB, NCC, NDD**
