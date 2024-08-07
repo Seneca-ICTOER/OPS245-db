@@ -1,8 +1,8 @@
 ---
-id: lab1-db
-title: Lab 1 - Dual Boot Version
+id: lab1
+title: Lab 1
 sidebar_position: 1
-description: Lab 1 - DualBoot Version
+description: Lab 1
 ---
 
 # Lab 1: Installing Debian 12
