@@ -1,8 +1,8 @@
 ---
-id: lab1-vbox
-title: Lab 1 - VirtualBox Version
+id: lab1-db
+title: Lab 1 - Dual Boot Version
 sidebar_position: 1
-description: Lab 1 - VirtualBox Version
+description: Lab 1 - DualBoot Version
 ---
 
 # Lab 1: Installing Debian 12
