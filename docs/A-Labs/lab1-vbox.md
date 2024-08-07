@@ -5,7 +5,7 @@ sidebar_position: 1
 description: Lab 1 - VirtualBox Version
 ---
 
-# Lab 1: Installing Debian 12
+# Lab 1: Installing Debian 12remove
 
 ## Lab Preparation
 
