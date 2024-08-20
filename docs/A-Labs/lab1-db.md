@@ -34,7 +34,7 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 ### Minimum Required Materials
 
 1. **Solid State Drive** Minimum Size: 240GB
-2. **USB Flash drive** To install Debian 12 install image 
+2. **USB Flash drive** To install Debian 12 installation image 
 3. **Lab Logbook** [(Click Here to Download)](/files/OPS245-Logbook-Online.doc)
 
 ### Linux Command Reference
@@ -82,14 +82,20 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 > ![Rufus Ready](/img/rufusready.jpg)
 - Click "START" and Rufus will begin to create your installation image on your flash drive
 - **Note: If Rufus asks you to select the mode that you wish to use to write the image, select "Write in ISO image mode".**
-- Once the process has completed you will have your installation flash drive ready 
+- Once the process has completed you will have your installation flash drive ready. 
 
-## Investigation 1: Create And Install Your host Debian 12 system onto your SSD (debhost)
+## Investigation 2: Create And Install Your host Debian 12 system onto your SSD (debhost)
+
+1. Plug your installation USB flash drive and your SSD external hard drive into the Seneca lab computer
+2. Turn on the Seneca lab computer. You will need to hit the F12 key as soon as you turn it on until you see the following screen:
+> ![Bootable devices](/img/boot-select-ssd.jpg)
+3. **IT IS VERY IMPORTANT THAT YOU PERFORM THESE NEXT STEPS CAREFULLY!!** Notice that there are multiple boot options available to you. You should have 4 options. The Windows Boot Manager is built into the Seneca lab computer and is used for the built-in image that Seneca uses. **DO NOT TOUCH THE WINDOWS BOOT MANAGER**. The UEFI 2550Micron 512GB device is the built-in hard drive on the Seneca computers. We can tell it is the built-in hard drive because of the symbol to its left. Depending on the computer you are using, it's exact designation may be different from what you see but the symbol will be the same. **DO NOT TOUCH THE INTERNAL HARD DRIVE**. Altering either of these may break the system and it is the student's responsibility to ensure that no damage comes to the Seneca computers. **YOU HAVE BEEN WARNED!**
+4. The other two devices you will see are your external SSD and your installation USB flash drive. Your labels will likely be different from what you see in the image above but they will both have the USB symbol beside them as you can see beside my Sabrent and Generic Mass Storage devices.
 
 In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
 **Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
 
-### Part 1: Using VirtualBox to Create a New Virtual Machine (VM)
+### Part 1: Booting to your created botable flash drive
 
 **debhost VM Details:**
 
