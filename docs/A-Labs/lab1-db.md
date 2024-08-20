@@ -25,6 +25,7 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 
 ### Main Objectives
 
+- Create a bootable USB drive of Debian 12 using Rufus.
 - **Correctly install Debian 12 (debhost)** on your SSD and check that it boots correctly.
 - Note common Linux commands and record them in your lab logbook.
 - Use **scripts** to generate a post-install report for your Debian 12 host.
@@ -65,9 +66,18 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 - Using the vi Text Editor: **/home/ops235/vi-tutorial**
 - Shell Scripting - Part I (Scripting Basics): **/home/ops235/scripting-1**
 
-## Investigation 1: Create And Install Your First Virtual Machine (debhost)
+## Investigation 1: Create a bootable installation drive using Rufus and the latest Debian 12 image
+**Note** The steps in investigation 1 to create your install drive must be completed on your own personal computer 
 
-In this lab, you will learn how to install your **Debian 12 VM** using the **VirtualBox** application.
+- Download the Debian 12 image from the [Debian Website](https://www.debian.org/download)
+- Download Rufus from the [Rufus Website](https://rufus.ie/en)
+> ![Rufus Download](/img/rufusdownload.jpg)
+- Open Rufus
+
+## Investigation 1: Create And Install Your host Debian 12 system onto your SSD (debhost)
+
+In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
+**Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
 
 ### Part 1: Using VirtualBox to Create a New Virtual Machine (VM)
 
