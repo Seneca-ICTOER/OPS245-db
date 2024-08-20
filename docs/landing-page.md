@@ -52,18 +52,21 @@ Most of the learning in this course occurs through the hands-on problem solving 
 ## Required Materials
 
 1. **Solid State Drive (SSD) Minimum Capacity:** 240 GB
-2. **Debian 12 netinstaller ISO Image**
+2. **SATA-to-USB Connector**
+> ![SATA USB Connnect](/img/satausbconnector.jpg)
+
+3. **Debian 12 netinstaller ISO Image**
 
    - [Download from Debian](https://www.debian.org)
 
-3. **USB Flash Drive** (3.0 preferred) **Minimum Capacity:** 16 GB
-4. **Lab Logbook** (download & print Both sides per lab permitted)
+5. **USB Flash Drive** (3.0 preferred) **Minimum Capacity:** 16 GB
+6. **Lab Logbook** (download & print Both sides per lab permitted)
 
    - [Download Doc](/files/OPS245-Logbook-Online.doc)
    - **NOTE: If you've taken this class in a previous semester, you MAY NOT bring that version of the lab logbook to any testing.**
    - Your Professor will direct you on what they want you to do with the Lab Lag Book
 
-5. **Dos and Don'ts** (**PLEASE READ**)
+7. **Dos and Don'ts** (**PLEASE READ**)
 
    - [Tips](/C-ExtraResources/tips.md)
 
