@@ -34,7 +34,8 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 ### Minimum Required Materials
 
 1. **Solid State Drive** Minimum Size: 240GB
-2. **Lab Logbook** [(Click Here to Download)](/files/OPS245-Logbook-Online.doc)
+2. **USB Flash drive** To install Debian 12 install image 
+3. **Lab Logbook** [(Click Here to Download)](/files/OPS245-Logbook-Online.doc)
 
 ### Linux Command Reference
 
@@ -67,12 +68,21 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 - Shell Scripting - Part I (Scripting Basics): **/home/ops235/scripting-1**
 
 ## Investigation 1: Create a bootable installation drive using Rufus and the latest Debian 12 image
-**Note** The steps in investigation 1 to create your install drive must be completed on your own personal computer 
+**Note:** The steps in investigation 1 to create your install drive must be completed on your own personal computer and should be completed prior to class
 
 - Download the Debian 12 image from the [Debian Website](https://www.debian.org/download)
 - Download Rufus from the [Rufus Website](https://rufus.ie/en)
 > ![Rufus Download](/img/rufusdownload.jpg)
-- Open Rufus
+- You should now have both the Rufus executable and the Debian 12 image on your personal computer
+> ![Rufus and Debian](/img/rufusanddebian.jpg)
+- Run Rufus and you will see the Rufus dialogue box appear.
+- Select the Debian 12 image as your boot selection
+> ![Rufus Select Image](/img/rufusselectimage.jpg)
+- Double check that your flash drive is selected for the "Device" field, your Debian image has been selected for the boot selection, and that all other settings are the same as the image below.
+> ![Rufus Ready](/img/rufusready.jpg)
+- Click "START" and Rufus will begin to create your installation image on your flash drive
+- **Note: If Rufus asks you to select the mode that you wish to use to write the image, select "Write in ISO image mode".**
+- Once the process has completed you will have your installation flash drive ready 
 
 ## Investigation 1: Create And Install Your host Debian 12 system onto your SSD (debhost)
 
