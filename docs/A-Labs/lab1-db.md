@@ -97,8 +97,15 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 6. If you created your installation USB flash drive correctly, the Seneca Lab computer will boot to it and eventually you will see the following screen:
 > ![advanced options](/img/boot-select-advanced.jpg)
 7. Select "Advanced Options".
-8. Next, select "Graphical Expert Install"
-9. Next
+8. Select "Graphical Expert Install".
+9. Select "Choose Language", select "English", and click "Continue".
+10. Set your location as "Canada" and click "Continue".
+11. Set your base default locale to "Canada en_CA.UTF-8".
+12. Leave the "Additional Locales" screen blank and click "Continue".
+13. Select "Configure Keyboard".
+14. Select "American English" and click "Continue".
+15. Select "Detect and Mount Installation Media".
+16. 
 
 In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
 **Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
