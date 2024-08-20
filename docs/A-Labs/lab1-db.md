@@ -17,17 +17,17 @@ In order to save money and resources when learning to install, to manage, and to
 - **Lab 2**: Install a **Virtualization program package** on your **Debian 12** called **KVM** which will be used to create 3 Virtual Machines (VMs) that you will use to learn about Linux system administration for the remainder of this course.
 
 The virtualization software will allow you to create and administer **4 different virtual machines** (**VMs**) on your computer system.
-![labenv.png](/img/deabian-lab1-network-diagram-updated.png)
+![labenv.png](/img/debian-lab1-network-diagram-updated.png)
 
-It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capacity of 240 GB** or **240 GB available on your own computer** for you to perform the lab work and provide storage for your Debian 12 host and other VMs that you will create in Lab 2. **Due to space requirements, you are NOT permitted to share this SSD drive with any other course material than our OPS245 course.**
+It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capacity of 240 GB** or **240 GB available on your own computer** for you to perform the lab work and provide storage for your Debian 12 host and VMs that you will create in Lab 2. **Due to space requirements, you are NOT permitted to share this SSD drive with any other course material than our OPS245 course.**
 
-> **NOTE: It is feasible to use a notebook computer with sufficient hard disk capacity to perform these labs (as you would for an SSD drive)**. It would require that your notebook computer can connect to the Internet (including in Seneca's computer labs). You would be required to follow the same instructions for this lab (SSD).
+> **NOTE: It is feasible to use a notebook computer with sufficient hard disk capacity to perform these labs (as you would for an SSD drive)**. It would require that your notebook computer can connect to the Internet (including in Seneca's computer labs). You would be required to follow the same instructions for this lab (SSD). **If you are planning to do these labs on your own personal laptop, please see your professor before you start the installation process to ensure you have appropriate hardware.**
 
 ### Main Objectives
 
-- **Correctly install the Debian 12 host VM (debhost)** on your SSD using **VirtualBox**.
+- **Correctly install Debian 12 (debhost)** on your SSD and check that it boots correctly.
 - Note common Linux commands and record them in your lab logbook.
-- Use **scripts** to generate a post-install report for your Debian 12 host VM.
+- Use **scripts** to generate a post-install report for your Debian 12 host.
 - **Disable Linux Kernel security enhancements** to allow for more experimentation.
 
 ### Minimum Required Materials
