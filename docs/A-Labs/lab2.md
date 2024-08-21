@@ -11,7 +11,7 @@ description: Lab 2
 
 ### Purpose / Objectives of Lab 2
 
-In this lab, you will create 3 remaining virtual machines using another virtualisation program called **KVM** that will run in your debhost VM. These VMs will be used throughout the remainder of this course to learn how to administer them (installing software, managing services, networking, etc).
+In this lab, you will create 3 virtual machines u virtualisation program called **KVM** that will run in your debhost system. These VMs will be used throughout the remainder of this course to learn how to administer them (installing software, managing services, networking, etc).
 
 While you are performing this lab, it is recommended to generally note the major differences in the different installation methods, and which method you prefer to use if you were a Linux system administrator in charge of installing many Linux distributions for an organization.
 
