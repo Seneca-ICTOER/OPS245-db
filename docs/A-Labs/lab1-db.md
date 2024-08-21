@@ -102,10 +102,25 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 10. Set your location as "Canada" and click "Continue".
 11. Set your base default locale to "Canada en_CA.UTF-8".
 12. Leave the "Additional Locales" screen blank and click "Continue".
-13. Select "Configure Keyboard".
+13. Select "Configure Keyboard" and click "Continue".
 14. Select "American English" and click "Continue".
-15. Select "Detect and Mount Installation Media".
-16. 
+15. Select "Detect and Mount Installation Media" and click "Continue". Your media will then be detected.
+16. Select "Load installer components from installation media" and click "Continue".
+17. Leave the next screen blank and click "Continue".
+18. Select "Detect network hardware" and click "Continue".
+19. Select "Configure network" and click "Continue".
+20. For "Auto-configure networking" select "Yes" and click "Continue".
+21. Leave the "Waiting time for link detection" as the default value and click "Continue".
+22. Give your system the hostname "debhost" and click "Continue".
+23. Leave the domain name blank and click "Continue".
+24. Select "Set up users and passwords" and click "Continue".
+25. For "Allow login as root", select "No" and click "Continue".
+26. Provide your full name on the next screen (first and last name) and click "Continue".
+27. On the next screen provide your username for your user account and click "Continue". This will be the same username you have for your myseneca email address. (eg. if the email address is hheim@myseneca.ca then the username would be hheim.) **Note** Your username MUST match your myseneca username. If it does not match, you will be asked to re-install.
+28. On the next screen, provide a password for your user account. You will need to input it twice.
+29. Select "Configure the clock" and click "Continue."
+30. For "Set the clock using NTP" select "Yes" and click "Continue".
+31. On the next screen, leave the default NTP server and click "Continue".
 
 In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
 **Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
