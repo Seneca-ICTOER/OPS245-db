@@ -66,7 +66,7 @@ We will now install the KVM package in order to create our VMs. We will also be 
 **Perform the following steps:**
 
 1. Log into your `debhost` machine.
-2. perform a software update on your debhost VM by issuing the following command:
+2. perform a software update on your debhost by issuing the following command:
 
 ```bash
 sudo apt update && sudo apt upgrade
