@@ -141,7 +141,18 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 47. For "Protocols for file downloads" select "http" and click "Continue".
 48. For "Debian archive mirror country" select "Canada" and click "Continue".
 49. For "Debian archive mirror" leave the default selection - "deb.debian.org" - and click "Continue".
-50. 
+50. Leave the "HTTP proxy information" blank and click "Continue".
+51. For "Use non-free firmware" select "Yes" and click "Continue".
+52. For "Use non-free software" select "No" and click "Continue".
+53. For "Use contrib software" select "No" and click "Continue".
+54. For "Enable source repositories in APT" select "No" and click "Continue".
+55. For "Services to use" leave the default selections and click "Continue".
+56. Select "Select and install software" and click "Continue".
+57. For "Updates management on this system" select "No automatic updates" and click "Continue". (We will be updating our systems manually)
+58. For "Participate in the package usage survey" select "No" and click "Continue".
+59. On the next screen you will select what software to install with the base install. There are 4 items we need, 3 of which should already be selected. Check the "SSH server" box and you should have all 4 you need as shown below:
+> ![softwareselection](/img/tasksel_first_0.png)
+60. Double check that you have all 4 selected - Debian desktop environment, GNOME, SSH server, and standard system utilities.
 
 In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
 **Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
