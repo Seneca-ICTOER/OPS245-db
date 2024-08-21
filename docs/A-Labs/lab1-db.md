@@ -189,11 +189,11 @@ When it reboots, be prepared to bring up the boot menu again, just like you did 
 When the system reboots you will be presented with a graphical login screen. Select your username enter your password
 
 Then you will be presented with the "Welcome" application
--"Next" for English
--"Next" keyboard layout
--Turn off Location services and then "Next"
--"Skip" connecting your online accounts
--Click "Start Using Debian GNU/Linux"
+- "Next" for English
+- "Next" keyboard layout
+- Turn off Location services and then "Next"
+- "Skip" connecting your online accounts
+- Click "Start Using Debian GNU/Linux"
 
 You can now remove your bootable installation USB flash drive from the computer. If you only have one USB flash drive, you can reformat your flash drive for other uses later in this course. However, it is likely that some students will need to do a re-install of their host system at some point during the semester, so if you can it would be a good idea to keep this one as a bootable installer and use another flash drive for general storage. (Which will become important in Lab 2!)
 
