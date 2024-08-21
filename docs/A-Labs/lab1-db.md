@@ -92,7 +92,7 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 2. Turn on the Seneca lab computer. You will need to hit the F12 key as soon as you turn it on until you see the following screen:
 > ![Bootable devices](/img/boot-select-ssd.jpg)
 3. **IT IS VERY IMPORTANT THAT YOU PERFORM THESE NEXT STEPS CAREFULLY!!** Notice that there are multiple boot options available to you. You should have 4 options. The Windows Boot Manager is built into the Seneca lab computer and is used for the built-in image that Seneca uses. **DO NOT TOUCH THE WINDOWS BOOT MANAGER**. The UEFI 2550Micron 512GB device is the built-in hard drive on the Seneca computers. We can tell it is the built-in hard drive because of the symbol to its left. Depending on the computer you are using, it's exact label may be different from what you see but the symbol will be the same. **DO NOT TOUCH THE INTERNAL HARD DRIVE**. Altering either of these may break the system and it is the student's responsibility to ensure that no damage comes to the Seneca computers. **YOU HAVE BEEN WARNED!**
-4. The other two devices you will see are your external SSD and your installation USB flash drive. At this time, we want to select our USB installation drive, not our external SSD yet. Your labels will likely be different from what you see in the image above but they will both have the USB symbol beside them as you can see beside my Sabrent and Generic Mass Storage devices. **Note:** In the image above, the installation USB flash drive is labeled as "Generic Mass Storage". The external SSD in the image above is labeled as "SABRENT". This is not the SSD itself, rather it is the label for the SATA-to-USB connector that you are using. If you are unsure of which one is your installation USB flash drive, check your physical SATA-to-USB connector that connects your SSD to the Seneca lab computer. You will likely see its brand name somewhere on the connector. Look for that name in the boot list. Now you know which item is your external SSD. Since we are not trying to boot from the SSD yet, pick the other USB device at this point - your installation USB flash drive.
+4. The other two devices you will see are your external SSD and your installation USB flash drive. At this time, we want to select our USB installation drive, not our external SSD yet. Your labels will likely be different from what you see in the image above but they will both have the USB symbol beside them as you can see beside my Sabrent and Generic Mass Storage devices. **Note:** In the image above, the installation USB flash drive is labeled as "Generic Mass Storage". The external SSD in the image above is labeled as "SABRENT". This is not the SSD itself, rather it is the label for the SATA-to-USB connector that you are using. If you are unsure of which one is your installation USB flash drive, check your physical SATA-to-USB connector that connects your SSD to the Seneca lab computer. You will likely see its brand name somewhere on the connector. Look for that name in the boot list. Now you know which item is your external SSD. Make note of your external SSD label as you will need it later in this investigation. Since we are not trying to boot from the SSD yet, pick the other USB device at this point - your installation USB flash drive.
 5. Upon selecting your installation USB flash drive you will be asked for an admin passord. Provide the password and press "OK". **Note** Your professor will give you the password on the first day of class.
 6. If you created your installation USB flash drive correctly, the Seneca Lab computer will boot to it and eventually you will see the following screen:
 > ![advanced options](/img/boot-select-advanced.jpg)
@@ -106,7 +106,7 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 14. Select "American English" and click "Continue".
 15. Select "Detect and Mount Installation Media" and click "Continue". Your media will then be detected.
 16. Select "Load installer components from installation media" and click "Continue".
-17. Leave the next screen blank and click "Continue".
+17. On the next screen click "Continue".
 18. Select "Detect network hardware" and click "Continue".
 19. Select "Configure network" and click "Continue".
 20. For "Auto-configure networking" select "Yes" and click "Continue".
@@ -116,11 +116,32 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 24. Select "Set up users and passwords" and click "Continue".
 25. For "Allow login as root", select "No" and click "Continue".
 26. Provide your full name on the next screen (first and last name) and click "Continue".
-27. On the next screen provide your username for your user account and click "Continue". This will be the same username you have for your myseneca email address. (eg. if the email address is hheim@myseneca.ca then the username would be hheim.) **Note** Your username MUST match your myseneca username. If it does not match, you will be asked to re-install.
+27. On the next screen provide your username for your user account and click "Continue". This will be the same username you have for your myseneca email address. (eg. if the email address is hheim@myseneca.ca then the username would be "hheim".) **Note** Your username MUST match your myseneca username. If it does not match, you will be asked to re-install.
 28. On the next screen, provide a password for your user account. You will need to input it twice.
 29. Select "Configure the clock" and click "Continue."
 30. For "Set the clock using NTP" select "Yes" and click "Continue".
 31. On the next screen, leave the default NTP server and click "Continue".
+32. For the timezone, select the Eastern timezone and click "Continue".
+33. Next, select "Detect disks" and click "Continue".
+34. Select, "Partition disks" and click "Continue".
+35. For "Partition Method" select "Guided - Use entire disk".
+36. You will now see the following screen:
+> ![Disk selection](/img/partman-auto_select_disk_0.png)
+37. You should see 3 disks listed here - The lab computer's internal disk, your external SSD, and your installation USB flash drive. Note that the internal disk will have the label "/dev/nvme0n1" (or something similar) while your external SSD label should begin with "SCSI". **WARNING!! DO NOT SELECT THE LAB COMPUTER'S INTERNAL DISK. THIS WILL RENDER THE LAB COMPUTER UNUSABLE AND YOU WILL BE HELD RESPONSIBLE. YOU HAVE BEEN WARNED!** Select your external SSD and click "Continue". If you are uncertain about which disk to select, refer back to step 4 to double check which item on the list is your SSD. You can also double check with your professor.
+38. For the "Partition scheme" select "All files in one partition" and click "Continue".
+39. The next screen will show you a preview of the changes that will be made to the selected disk. Double and triple check that you have selected the correct disk. You should see something like this for your SCSI labeled external SSD:
+> ![partition final check](/img/partman_choose_partition_0.png)
+40. When you are confident that you have selected the correct disk, select "Finish partitioning and write changes to disk" and click "Continue".
+41. On the next screen, under "Write changes to disk?" select "Yes" and click "Continue".
+42. Next, select "Install the base system" and click "Continue".
+43. For "Kernel to install", use the default value and click "Continue".
+44. For "Drivers to include in the initrd" use the default "generic" drivers and click "Continue".
+45. Next, select "Configure the package manager" and click "Continue".
+46. For "Use a network mirror" select "Yes" and click "Continue".
+47. For "Protocols for file downloads" select "http" and click "Continue".
+48. For "Debian archive mirror country" select "Canada" and click "Continue".
+49. For "Debian archive mirror" leave the default selection - "deb.debian.org" - and click "Continue".
+50. 
 
 In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
 **Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
