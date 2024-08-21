@@ -68,6 +68,29 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 - Using the vi Text Editor: **/home/ops235/vi-tutorial**
 - Shell Scripting - Part I (Scripting Basics): **/home/ops235/scripting-1**
 
+In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
+**Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
+
+**debhost system details:**
+
+- **Name**: debhost
+- **Boot media / Installation**: Bootable USB flash drive with Debian 12 Net Installer image on it
+
+  - [Download netinst image](https://www.debian.org/download)
+
+- **Disk space**: 240GB minimum
+
+**The Debian Web Site**
+
+Open up <https://www.debian.org/> in your browser. To get the latest copy of the Debian 12 netinstaller ISO click on the "Download" button.
+While you are on the site lets explore...
+
+One of the most important skills you should graduate with is the ability to teach yourself something new. You will not always have the luxury of attending a training course to learn something new, so we must be prepared to learn independently. This often means reading official documentation. Official documentation is also one of the primary sources of information you should use when troubleshooting or configuring a system. Along with user forums and wiki's. Google searches can often produce results that are not specific to your Linux distribution or version, so they can produce inaccurate results.
+
+Reading documentation, like any skill, requires practice. Reading `man` pages for example is often very confusing for new users as it hard to understand all of the terminology. However, the more time you spend reading the documentation the easier it will become.
+
+Click on the "User Support" link. Take a look at some of the support options available. Find the links to the documentation and forums. Take a look around. Bookmark the page. (The Debian website is well known for being difficult to navigate.)
+
 ## Investigation 1: Create a bootable installation drive using Rufus and the latest Debian 12 image
 **Note:** The steps in investigation 1 to create your install drive must be completed on your own personal computer and should be completed prior to class
 
@@ -85,8 +108,8 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 - **Note: If Rufus asks you to select the mode that you wish to use to write the image, select "Write in ISO image mode".**
 - Once the process has completed you will have your installation flash drive ready. 
 
-## Investigation 2: Create And Install Your host Debian 12 system onto your SSD (debhost)
-**Note:** From this step onward, you will be completing these tasks on the Seneca Lab computer
+## Investigation 2: Install Your host Debian 12 system onto your external SSD (debhost)
+**Note:** From this step onward, you will be completing these tasks on the Seneca Lab computer. It is highly recommended that you complete this in the first lab class of the semester.
 
 1. Plug your installation USB flash drive and your SSD external hard drive into the Seneca lab computer
 2. Turn on the Seneca lab computer. You will need to hit the F12 key as soon as you turn it on until you see the following screen:
@@ -116,8 +139,8 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 24. Select "Set up users and passwords" and click "Continue".
 25. For "Allow login as root", select "No" and click "Continue".
 26. Provide your full name on the next screen (first and last name) and click "Continue".
-27. On the next screen provide your username for your user account and click "Continue". This will be the same username you have for your myseneca email address. (eg. if the email address is hheim@myseneca.ca then the username would be "hheim".) **Note** Your username MUST match your myseneca username. If it does not match, you will be asked to re-install.
-28. On the next screen, provide a password for your user account. You will need to input it twice.
+27. On the next screen provide your username for your user account and click "Continue". This will be the same username you have for your myseneca email address. (eg. if the email address is cdendias@myseneca.ca then the username would be "cdendias".) **Note** Your username MUST match your myseneca username. If it does not match, you will be asked to re-install.
+28. On the next screen, provide a password for your user account. You will need to input it twice. **Make note of your password! If you forget, you will have to re-install!**
 29. Select "Configure the clock" and click "Continue."
 30. For "Set the clock using NTP" select "Yes" and click "Continue".
 31. On the next screen, leave the default NTP server and click "Continue".
@@ -159,277 +182,22 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 64. For "Run os-prober automatically to detect and boot other OSes" select "No" and click "Continue".
 65. Select "Finish the Installation" and click "Continue".
 66. For "Is the system clock set to UTC?" select "Yes" and click "Continue".
-67. Your system will now complete the installation. When it reboots, you will need to bring up the boot menu again, just like you did in step 2. This time, however, you will select your external SSD from the list of bootable drives. 
+67. Your system will now complete the installation and ask to reboot. Click "Continue" to reboot.
 
-In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
-**Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
+When it reboots, be prepared to bring up the boot menu again, just like you did in step 2. This time, however, you will select your external SSD from the list of bootable drives. Put in the admin password when prompted and your new Debian install will load up.
 
-### Part 1: Booting to your created botable flash drive
-
-**debhost VM Details:**
-
-- **Name**: debhost
-- **Boot media / Installation**: Debian 12 Net Installer install DVD (image file)
-
-  - [Download netinst image](https://www.debian.org/download)
-
-- **Disk space**: 238GB
-- **CPUs**: 1 CPU, 4 cores **(Do not mix and match! Always use 1 CPU, and multiples of 2 for cores.)**
-
-> ![Caution](/img/caution.png)**If you are using an external SSD drive on a Seneca Lab Computer you _must_ FORMAT it AS exFAT.**
->
-> By default, most external drives will be formatted for NTFS. **NTFS-formatted drives may cause issues in this course if you are constantly moving between different Seneca Lab computers.** When you plug your drive in, open My Computer, right-click on the new drive, and select _Format_....
-> If you are storing the vmdk file (VirtualBox disk image) on your own devices internal storage, this is not necessary.
-
-![Format exFAT](/img/Format_ExFAT.png)
-
-**Confirm External SSD Device is Recognized as a Drive in Windows Explorer**
-
-It is essential that your Windows machine recognizes your SSD device with a drive letter on your Windows machine. Open up file explorer in Windows and examine the properties of your SSD Device. (Make note of its drive letter and path)
-
-> ![Caution](/img/caution.png)**Enabling Virtualisation on your Home Computer:**
->
-> If you are going to complete the labs on your own laptop, or desktop computer at home, there are a few things you need to be aware of:
->
-> - **RAM Size considerations**: Your Seneca Lab Workstations have **16GB** of RAM. Your own computer should have also have at least that much RAM in order to function efficiently.
-> - **Enable Virtualisation in home computer's BIOS**: Many home computers do not have Virtualisation enabled in their computer's BIOS. In your machines BIOS/UEFI: Enable the options VT-X(required) and VT-D(only if available)
-
-**The Debian Web Site**
-
-Open up <https://www.debian.org/> in your browser. To get the latest copy of the Debian 12 netinstaller ISO click on the "Download" button.
-While you are on the site lets explore...
-
-One of the most important skills you should graduate with is the ability to teach yourself something new. You will not always have the luxury of attending a training course to learn something new, so we must be prepared to learn independently. This often means reading official documentation. Official documentation is also one of the primary sources of information you should use when troubleshooting or configuring a system. Along with user forums and wiki's. Google searches can often produce results that are not specific to your Linux distribution or version, so they can produce inaccurate results.
-
-Reading documentation, like any skill, requires practice. Reading `man` pages for example is often very confusing for new users as it hard to understand all of the terminology. However, the more time you spend reading the documentation the easier it will become.
-
-Click on the "User Support" link. Take a look at some of the support options available. Find the links to the documentation and forums. Take a look around. Bookmark the page. (The Debian website is well known for being difficult to navigate.)
-
-**Creating the VM in VirtualBox**
-
-Before you can install your Debian Linux OS, you must first create a storage container which is a virtual machine (VM) using VirtualBox on your **host** computer.
-
-If you will be completing the course work on your own computer then you should download and install VirtualBox from the [VirtualBox Website](https://www.virtualbox.org)
-If you will be completing the course work on Seneca Lab computers you will need to run VirtualBox from "MyApps"
-
-> ![Caution](/img/caution.png) > **Possible VirtualBox Installation Problem:**
->
-> if you receive a warning that VirtualBox has missing dependencies for Python Core / win32api cancel the installation and follow [these instructions](https://www.sysnettechsolutions.com/en/fix-python-win32api-virtualbox/) before trying to install again.
-
-**Perform the Following Steps:**
-
-1.  Power up the computer in your Seneca lab in **Windows**. (or your own device)
-2.  If you haven't already downloaded the Debian 12 netinstaller DVD ISO, then do so now.
-3.  If you are using an external SSD drive, connect it to the computer and note the drive letter for that device.
-4.  If you will be working on Seneca Lab computers, format your SSD to use exFAT, **not NTFS**. Open _My Computer_, right-click on the SSD, and select _Format_.... The dialog box should have the **exFAT** option selected. Once selected, click _Start_.
-5.  Create a folder called: **Virtual Machines** on your SSD device or internal storage device. The storage device should have 240GB of usable space.
-6.  Launch VirtualBox.
-7.  Click the File menu, then select Preferences.
-8.  Under the General tab, set the Default Machine Folder: to the correct location for Virtual Machines, enter the pathname for the newly created folder in your SSD or internal device, and click OK.
-    ![VirtualBox Prefs](/img/vboxprefs.png)
-9.  Click on the "New" icon to create a new VM.
-    We will just be creating a "shell" for the VM to contain our Debian 12 Linux operating system. This will allow us to configure the VM properly so it will boot-up properly in our Seneca labs.
-
-          - Name: debhost
-          - Folder:  Check the location
-          - ISO image: Browse to the downloaded ISO file
-          - Type: Linux
-          - Version: Debian (64 bit)
-          - Check the box to "Skip unattended Installation"
-          - Click "Next"
-
-> NOTE: Since this “virtual machine” will be supporting other virtual machines (i.e. nested VMs), it is necessary to give this host VM a higher amount of Memory, and number of processors cores.
-> You can always change these settings later on to maximize the performance of running the “nested” VMs on your Host VM.
-
-10. Assign the VM 8GB of memory. (8192 MB)
-11. Assign 4 CPU's and select the box for ":Enable EFI"
-12. Click "Next"
-13. Choose "Create a virtual hard disk now"
-14. Set the size of the virtual hard disk to 240GB
-15. Click "Next"
-16. Review the settings and Click "Finish"
-
-**Before starting the VM we need to adjust a couple of settings**
-
-1.  Click on the "Settings" icon
-2.  Click on the "System" tab
-3.  Under "Motherboard" check "Enable EFI"
-4.  Under "Processor" give your VM 4 Processors
-5.  **Enable Nested VT-x/AMD-v**
-6.  Click on the "Display" tab
-7.  Increase the "Video Memory" to 128MB
-8.  Click "OK"
-
-**Boot the VM and begin the installation of Debian**
-
-1.  Click on the "Start" icon
-2.  When the Installer Boot Screen appears, Select "Advanced options..."
-3.  Select "Expert install"
-
-> ![Caution](/img/caution.png)**Possible installer problem:**
->
-> If the installer starts but it does not correctly display in the window, either with a black or grey screen...
->
-> - Close and restart the VM
-> - When the Installer Boot Screen appears, Select "Advanced Options"
-> - Highlight but don't hit enter on the "Expert install" option
-> - Type 'e' to edit the boot options
-> - Add the boot parameter `fb=false` to the linux line as shown below
-> - Type ctrl-x to boot
->   ![grup fb option](/img/debinstfb.png)
-
-4.  Select "Choose Language"
-5.  Set your language to English and your location/locale to Canada
-6.  Select "Continue" to skip additional locales
-7.  Select "Configure the keyboard" and choose "American English"
-8.  Select "Detect and mount installation media" and "Continue"
-9.  Select "Load installer components from installation media" and "Continue"
-10. Select "Detect network hardware"
-11. Select "Configure the network" and "Yes" to Auto-configure the network
-12. Set the Hostname to be "debhost"
-13. Leave the Domain name: as blank
-14. Select "Set up users and passwords"
-
-    > The installation of Debian 12 provides 2 methods of achieving administrative access to the system.
-    >
-    > - If you enable the "root" account and provide it with a password then to get admin access you need to login as root or use the `su` command to switch to root. No other accounts will have admin access.
-    > - If you leave the "root" account disabled then the first regular account that you create will be able to access administrative privileges by using the `sudo` command.
-    >   Generally the 2nd option is considered to be better, especially in environments where multiple users may need admin access to the system. You can always enable root account access after installation if you want both options available.
-    >
-    > ![Caution](/img/caution.png) > **WARNING: Do not login to a Graphical User Interface as the "root" account. Most Linux distributions prevent this.**
-
-15. Choose "No" to prevent "root" from being enabled
-16. Enter your full name for the initial user account and then "Continue"
-17. Set your Username. At this point you can edit the username to be the same as your Seneca account name to make it easier to remember. (not required)
-
-    > As we progress through the course and create our other VM's we are going to use the same username with the same password on all of our VM's. This is a requirement for running the Lab Check scripts.
-
-18. Set a password for your account. You will need to enter it twice.
-
-    > ![Caution](/img/caution.png)**"P@ssw0rd" is NOT a secure password!**
-
-19. Select "Configure the clock" and "Yes" to use NTP to set the clock and "Continue" to accept the NTP server.
-20. Select the "Eastern" time zone:
-21. Select "Detect disks"
-22. Select "Partition disks" and choose the "Manual" partitioning method.
-
-> ![Caution](/img/caution.png)**It is very important that you setup disk partitioning correctly.
-> A mistake at this point in the lab could cause problems in future labs.**
-
-23. Select the "SCSI1" device which is the virtual disk for this VM.
-24. Choose "Yes" to create a new empty partition table on the device.
-25. Choose a "gpt" partition table
-26. Choose the "Free Space"
-27. Choose "Create a new partition"
-28. Enter a size of 500 MB and locate the partition at the beginning of the device
-29. Change the "Use as: " to "EFI System Partition" and leave the "Bootable flag: on"
-30. Choose the "Free Space"
-31. Choose "Create a new partition"
-32. Enter a size of 500 MB and locate the partition at the beginning
-33. Change the "Mount Point" to /boot and leave the remaining defaults
-34. Choose the "Free Space"
-35. Choose "Create a new partition"
-36. Enter a size of 190 GB and locate the partition at the beginning
-37. Change the "Use as: " to "physical volume for LVM" and leave the remaining defaults
-38. Choose the "Free Space"
-39. Choose "Create a new partition"
-40. Enter a size of 16 GB and locate the partition at the beginning
-41. Change the "Use as: " to "swap area" and leave the remaining defaults
-
-The remaining storage will be configured using "Logical Volume Management (LVM)"
-
-42. Choose "Configure the Logical Volume Manager"
-43. Compare your settings with the image below, make sure they are correct and choose "yes" to write those changes to disk
-    ![debgpt](/img/debgpt.png)
-44. Choose "Create volume group" and set Volume group name to "vg_debhost"
-45. Select "/dev/sda3" as the new device for the volume group and then continue
-46. Choose "Create logical volume"
-47. Select "vg_debhost" for the "Volume Group"
-48. Set the Logical volume name to "lv_root"
-49. Set the Logical volume size to "30G"
-50. Choose "Create logical volume"
-51. Select "vg_debhost" for the "Volume Group"
-52. Set the Logical volume name to "lv_home"
-53. Set the Logical volume size to "40G"
-54. Choose "Create logical volume"
-55. Select "vg_debhost" for the "Volume Group"
-56. Set the Logical volume name to "lv_images"
-57. Set the Logical volume size to "100G"
-58. Choose "Finish"
-59. Choose the lv_home device
-    ![deblvm1](/img/deblvm1.png)
-60. Change the "Use as: " to "Ext4 journalling filesystem"
-61. Change the "Mount point:" to "/home" and leave the remaining defaults
-62. Choose the lv_images device
-63. Change the "Use as: " to "Ext4 journalling filesystem"
-64. Change the "Mount point:" to a manual entry of "/var/lib/libvirt/images" and leave the remaining defaults
-65. Choose the lv_root device
-66. Change the "Use as: " to "Ext4 journalling filesystem"
-67. Change the "Mount point:" to "/" and leave the remaining defaults
-
-**Carefully review your partition settings before choosing "Finish partitioning and write changes to disk"
-Choose "Yes" to write the changes to disk**
-![debgptlvm](/img/debgptlvm-10.png)
-
-68. Choose "Install the base system"
-69. Select the default kernel suggested
-70. Select "generic" drivers
-71. Choose "Configure the package manager"
-72. Choose "No" to "Scan extra installation media"
-73. Choose "Yes" to "Use a network mirror"
-74. Select "http"
-75. Select "Canada"
-76. Accept the default archive mirror or the uwaterloo.ca mirror
-77. Leave HTTP Proxy blank
-78. Choose "Yes" to "Use non-free firmware"
-79. Choose "No" to "Use non-free software"
-80. Choose "No" to "Use contrib software"
-81. Choose "No" to "Enable source repositories in APT"
-82. Leave the default "Services to use:" selections
-83. Select "Select and install software"
-84. Choose "no automatic updates" (We will update manually)
-85. Choose "no" to the package usage survey
-86. On the Software Selection screen make sure that the **Debian Desktop Environment** and **Gnome** are selected and add the "SSH Server" to the default selections
-    ![tasksel](/img/tasksel.png)
-87. Select "Install the GRUB boot loader"
-88. Choose "No" to "Force GRUB installation to the EFI removable media path"
-89. Choose "Yes" to "Update NVRAM variables"
-90. Choose "No" to "Run os-prober automatically"
-91. Select "Finish the installation"
-92. Choose "Yes" to "Is the system clock set to UTC"
-93. Choose "Continue" to reboot
-
-When the system reboots you will be presented a graphical login screen
-login and enter your password
+When the system reboots you will be presented with a graphical login screen. Select your username enter your password
 
 Then you will be presented with the "Welcome" application
+-"Next" for English
+-"Next" keyboard layout
+-Turn off Location services and then "Next"
+-"Skip" connecting your online accounts
+-Click "Start Using Debian GNU/Linux"
 
-- "Next" for English
-- "Next" keyboard layout
-- Turn off Location services and then "Next"
-- "Skip" connecting your online accounts
-- Click "Start Using Debian GNU/Linux"
+You can now remove your bootable installation USB flash drive from the computer. If you only have one USB flash drive, you can reformat your flash drive for other uses later in this course. However, it is likely that some students will need to do a re-install of their host system at some point during the semester, so if you can it would be a good idea to keep this one as a bootable installer and use another flash drive for general storage. (Which will become important in Lab 2!)
 
-## Investigation 2: Common Post-Installation Tasks
-
-### **Fix Display Resolution**
-
-VirtualBox display your VM in 3 modes.
-
-- Windowed mode (default)
-- Full Screen Mode (Toggle with right-ctrl F)
-- Scaled mode (Toggle with right-ctrl S)
-
-> It is recommended to run VirtualBox in full screen mode. You can press right-ctrl F to toggle between windowed and full screen mode. It is recommended that you stay in full screen mode for the duration of your lab work. You should use Firefox within the VM to access the various websites for this course.
-
-Switch to Full Screen Mode
-
-Click on the icons in the top right corner and then the settings icon
-![settings](/img/debsettings.png)
-![settings2](/img/debsettings2.png)
-Then choose the "Displays" option
-
-Choose a display resolution that looks better. Start with 1920x1440 and then experiment with different resolutions until you find your preference.
+## Investigation 3: Common Post-Installation Tasks
 
 ### **Enable the root account**
 
@@ -465,7 +233,7 @@ This method of obtaining elevated privileges has several advantages over logging
 
 Because it is configurable to a fine degree, and because it provides for better security logging/accountability for System Admins, the preferred method of accessing root permissions is `sudo` . There are some circumstances where using the actual root account may be required.
 
-> ![Caution](/img/caution.png)**Keep the root password and your regular user account password the same on all of the VM's that you create in the labs.**
+> ![Caution](/img/caution.png)**Keep the root password and your regular user account password the same on this system and all of the VM's that you create in the labs.**
 >
 > In order to simplify running the lab checking scripts in future labs, using the same root password for ALL machines (debhost and virtual machines). Also use the same regular username and passwords for all of your machines (debhost and virtual machines).
 
@@ -563,7 +331,7 @@ An installation log file called `/var/log/installer/status` has been created to 
   - `sudo systemctl disable apparmor`
 - We will learn more about these commands later
 
-## Investigation 3: Using Shell Commands to Generate System Information
+## Investigation 4: Using Shell Commands to Generate System Information
 
 It is very common for system administrators to keep records regarding their installed computer systems. For example, it is necessary to have a record of all the hardware information for each machine in order to help fix computer hardware problems, and to assist when purchasing additional consistent computer hardware.
 
@@ -598,9 +366,9 @@ The [Bash Shell Reference Guide](/C-ExtraResources/bash-shell-reference-guide.md
 
 4. Review what you just wrote in your Lab Logbook. You should be able to understand them because you just put that content there, but what would this look like if you look at it several months from now? Make sure it's clear to future-you!
 
-**Answer Investigation 3 observations (all parts and questions) in your lab log book.**
+**Answer Investigation 4 observations (all parts and questions) in your lab log book.**
 
-## Investigation 4: Using BASH Scripting to Generate System Information Reports
+## Investigation 5: Using BASH Scripting to Generate System Information Reports
 
 You may have learned about creating and running Bash Shell Scripts in your ULI101 course. Shell scripts help Linux users and system administrators to automate repetitive tasks to become more efficient and to help them save time. We can take what we have learned from the commands above and put them into a bash script to generate information reports for your newly-installed Linux host machine.
 
