@@ -213,14 +213,15 @@ sudo iptables -L
 4. Browse to the location of your ISO image. (probably ~/Downloads) and select the iso image
 5. If the Operating System is not auto detected, uncheck the **"Automatically detect from the installation media"** and Choose **Debian 11**, and click **Forward**.
 
-![vmsource](/img/vmsource.png)
+>![vmsource](/img/vmsource.png)
 
 6. If a **"search permissions"** dialog box opens, Check **"Don't ask about these directories again"** and click **yes**
 
 ![searchperms](/img/searchperms.png)
 
 7. Set **Memory**: size to **2048** MB and **CPUs** to **2**, then click **Forward**.
-   ![memcpu](/img/memcpu.png)
+
+>![memcpu](/img/memcpu.png)
 
 8. Set **Hard Disk** size to **15** GB and click **Forward**.
 9. Enter the Name: **deb1**, AND then select the option: **Customize configuration before install**, and click **Finish**.
