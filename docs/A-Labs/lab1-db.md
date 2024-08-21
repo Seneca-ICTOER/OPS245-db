@@ -152,7 +152,14 @@ It is ESSENTIAL to have a **Solid State Drive (SSD) with a minimum storage capac
 58. For "Participate in the package usage survey" select "No" and click "Continue".
 59. On the next screen you will select what software to install with the base install. There are 4 items we need, 3 of which should already be selected. Check the "SSH server" box and you should have all 4 you need as shown below:
 > ![softwareselection](/img/tasksel_first_0.png)
-60. Double check that you have all 4 selected - Debian desktop environment, GNOME, SSH server, and standard system utilities.
+60. Double check that you have all 4 selected - Debian desktop environment, GNOME, SSH server, and standard system utilities. Click "Continue".
+61. Select "Install GRUB boot loader" and click "Continue".
+62. For "Force GRUB installation to the EFI removable media path" select "Yes" and click "Continue". **NOTE** This is very important! You will be unable to boot to your external hard drive from the Seneca lab computers if this is not set correctly.
+63. For "Update NVRAM variables to automatically boot into Debian" select "No" and click "Continue". **NOTE** This is also very important! We must not alter the existing NVRAM settings on the Seneca lab computers!
+64. For "Run os-prober automatically to detect and boot other OSes" select "No" and click "Continue".
+65. Select "Finish the Installation" and click "Continue".
+66. For "Is the system clock set to UTC?" select "Yes" and click "Continue".
+67. Your system will now complete the installation. When it reboots, you will need to bring up the boot menu again, just like you did in step 2. This time, however, you will select your external SSD from the list of bootable drives. 
 
 In this lab, you will learn how to install **Debian 12** to your SSD for use in the Seneca boot labs.
 **Please note that at this time the Seneca boot labs are in C2030, C2034, and C2036. You will only be able to boot to your SSDs in these labs.**
