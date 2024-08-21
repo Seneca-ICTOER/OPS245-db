@@ -59,7 +59,7 @@ Most of the learning in this course occurs through the hands-on problem solving 
 
    - [Download from Debian](https://www.debian.org)
 
-5. **USB Flash Drive** (3.0 preferred) **Minimum Capacity:** 16 GB
+5. **USB Flash Drive** (3.0 preferred, 2 flash drives if possible) **Minimum Capacity:** 16 GB
 6. **Lab Logbook** (download & print Both sides per lab permitted)
 
    - [Download Doc](/files/OPS245-Logbook-Online.doc)
