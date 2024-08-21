@@ -11,13 +11,13 @@ description: Lab 2
 
 ### Purpose / Objectives of Lab 2
 
-In this lab, you will create 3 virtual machines u virtualisation program called **KVM** that will run in your debhost system. These VMs will be used throughout the remainder of this course to learn how to administer them (installing software, managing services, networking, etc).
+In this lab, you will create 3 virtual machines using a virtualization program called **KVM** that will run in your debhost system. These VMs will be used throughout the remainder of this course to learn how to administer them (installing software, managing services, networking, etc).
 
 While you are performing this lab, it is recommended to generally note the major differences in the different installation methods, and which method you prefer to use if you were a Linux system administrator in charge of installing many Linux distributions for an organization.
 
 **Main Objectives**
 
-- Installing additional Virtualisation Software on your **debhost** machine (**KVM**)
+- Installing additional Virtualization Software on your **debhost** machine (**KVM**)
 - Create 3 separate VMs (virtual machines) using different installation methods:
 
   - **deb1**: Network Debian Installation (**Graphical Desktop Environment**)
@@ -28,9 +28,9 @@ While you are performing this lab, it is recommended to generally note the major
 - Properly **backup VM images** and backup **VM configuration files**
 - Create and run **Bash Shell scripts** to automatically backup our installed VM's
 
-![Lab Environment](/img/labenv.png)
+![Lab Environment](/img/debian-lab1-network-diagram-updated.png)
 
-At the end of Lab 2, your hypervisor (VirtualBox or VMWare) application will contain **4 virtual machines** (**debhost** in your hypervisor application, and **deb1, deb2, deb3 VMs** in your **KVM** application). You will now have the option to run one virtual machine at a time, or run all machines simultaneously to learn about networking (covered in later labs)
+At the end of Lab 2, your debhost system will contain **3 virtual machines** (**deb1, deb2, deb3 VMs** in your **KVM** application). You will now have the option to run one virtual machine at a time, or run all machines simultaneously to learn about networking (covered in later labs)
 
 ### Minimum Required Materials
 
@@ -61,7 +61,7 @@ At the end of Lab 2, your hypervisor (VirtualBox or VMWare) application will con
 
 ### Part 1: Install KVM Virtualisation Application
 
-We will now install the KVM package in order to create our remaining "nested" VMs. We will also be starting several services. We will learn more about managing firewalls in later labs.
+We will now install the KVM package in order to create our VMs. We will also be starting several services. We will learn more about managing firewalls in later labs.
 
 **Perform the following steps:**
 
@@ -138,7 +138,7 @@ sudo systemctl restart <servicename>
 sudo usermod -aG libvirt <username>
 ```
 
-7. **Restart your debhost virtual machine**. If you fail to do this, you may experience virtualization network problems and issues loading Virtual Machine Manager.
+7. **Restart your debhost**. If you fail to do this, you may experience virtualization network problems and issues loading Virtual Machine Manager.
 
 8. Once you've restarted, confirm your changes took affect by running the following as your regular user (don't use sudo):
 
