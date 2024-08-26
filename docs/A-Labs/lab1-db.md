@@ -413,39 +413,16 @@ echo "Report Date:  $date"
 
 ## Lab 1 Sign-Off
 
-Follow your Professors submission instructions for lab 1 on Blackboard.
+It is extremely important that you complete Lab 1 correctly as this Debian install will be the platform on which the rest of the course will be completed.
 
-Shell scripting is so essential for Linux administration that this course has created a shell script for every lab for this course that a student must download and run in order to check their work.
-
-If you have performed the lab correctly, then you will get a series of `OK` messages and you can proceed with the SIGN-OFF for lab1.
-
-On the other hand, if there were errors, then a `WARNING` message will appear with general suggestions that you will need to fix on your debhost VM in order to have your professor sign-off on this lab. Your lab should be correct before moving to Lab 2.
-
-**Perform the Following Steps:**
-
-1. Make certain that your **debhost** VM is running, open the Bash Shell terminal.
-2. Change to the **~/bin directory.**
-3. Download the checking script by issuing the following Linux command:
-
-```bash
-wget https://raw.githubusercontent.com/OPS245/debian-labs/main/lab1-check.bash
-```
-
-4. Give that downloaded shell script file execute permissions (for the file owner).
-5. Run the shell script using **sudo** and if there are any warnings, make fixes and re-run shell script until you receive a "congratulations" message.
-6. Arrange evidence (command output) for each of these items on your screen:
-
-- [x] Run the **lab1-check.bash** script (must have all `OK` messages, and the congratulations message)
-- [x] Proof of anything else your Professor asks to see.
+When you have completed Lab 1, ask your instructor to come and check your installtion. **This must be done in class.** They will ask you to complete a set of tasks/commands. If everything has been completed correctly, your instructor will mark your Lab 1 as complete. 
 
 ## Practice For Quizzes, Tests, Midterm & Final Exam
 
-1. Define the term _Virtual Machine_.
-2. List the major screens (steps) in the installation of Debian 12.
-3. What key-combination is used to toggle the view of your running VM from "window-mode" to "full-screen-mode"?
-4. List the steps for updating the Debian software.
-5. What is the **home** directory for the user "root"?
-6. How do you determine the host name of your GNU/Linux workstation?
-7. What command can display the NIC MAC address?
-8. What command is used to get a list of running processes on your newly-installed system?
-9. Write the Linux command to download the on-line file: http://linux.server.org/package.tar.gz
+1. List the major screens (steps) in the installation of Debian 12.
+2. List the steps for updating the Debian software.
+3. What is the **home** directory for the user "root"?
+4. How do you determine the host name of your GNU/Linux workstation?
+5. What command can display the NIC MAC address?
+6. What command is used to get a list of running processes on your newly-installed system?
+7. Write the Linux command to download the on-line file: http://linux.server.org/package.tar.gz
