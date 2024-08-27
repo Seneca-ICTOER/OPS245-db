@@ -127,9 +127,9 @@ Click on the "User Support" link. Take a look at some of the support options ava
 12. Leave the "Additional Locales" screen blank and click "Continue".
 13. Select "Configure Keyboard" and click "Continue".
 14. Select "American English" and click "Continue".
-15. Select "Detect and Mount Installation Media" and click "Continue". Your media will then be detected.
+15. Select "Detect and Mount Installation Media" and click "Continue". Your media will then be detected. Click "Continue".
 16. Select "Load installer components from installation media" and click "Continue".
-17. On the next screen click "Continue".
+17. On the next screen leave everything unselected and click "Continue".
 18. Select "Detect network hardware" and click "Continue".
 19. Select "Configure network" and click "Continue".
 20. For "Auto-configure networking" select "Yes" and click "Continue".
