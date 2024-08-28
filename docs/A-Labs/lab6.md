@@ -63,7 +63,7 @@ This diagram shows the current network configuration of your **debhost** machine
 
 **Perform the following steps:**
 
-1. Launch your **debhost VM** and start the Virtual Machine Manager.
+1. Launch your **debhost** and start the Virtual Machine Manager.
 2. Make certain that the **deb1**, **deb2**, and **deb3** virtual machines are **powered off**.
 3. In the Virtual Machine Manager dialog box, select **Edit-> Connection Details**.
    ![vmmedit](/img/vmmedit.png)
@@ -287,7 +287,7 @@ On large public networks like the Internet or even large private networks we use
 
 1. Complete this investigation on **all of your VMs** and the **debhost** machine.
 2. Use the `hostname` and `ip` commands on your **debhost** machine and all of your 3 VM's to gather the information needed to configure the **/etc/hosts** file on all of your Linux systems.
-3. Edit the **/etc/hosts** file for the **debhost**, **deb1**, **deb2** and **deb3** VMs. Add the following contents to the bottom of the **/etc/hosts** file:
+3. Edit the **/etc/hosts** file for **debhost**, and the **deb1**, **deb2** and **deb3** VMs. Add the following contents to the bottom of the **/etc/hosts** file:
 
 ```text
 192.168.245.1 debhost
@@ -358,7 +358,7 @@ ss -t dst :22
 > - **UDP** is a connectionless protocol that relies on application layer protocols to handle reliability of traffic.
 
 11. From **deb2** exit your ssh connection into **debhost** and rerun the command on the **`ss -at`**. Instead of **ESTABLISHED** it should now show a state of **CLOSE_WAIT**. Indicating that the TCP connection is being closed.
-12. On your debhost VM, try the command: `ss -atn` How is this output different? Without the -n option ss attempts to resolve IP addresses to host names (using /etc/hosts) and port numbers to service names (using /etc/services)
+12. On your debhost, try the command: `ss -atn` How is this output different? Without the -n option ss attempts to resolve IP addresses to host names (using /etc/hosts) and port numbers to service names (using /etc/services)
 13. Examine the **/etc/services** file and find which ports are used for the services: ssh, sftp, http
 
 **Answer INVESTIGATION 2 observations / questions in your lab log book.**
