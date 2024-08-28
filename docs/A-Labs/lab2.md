@@ -743,7 +743,7 @@ If you have successfully completed this lab, make a new backup of all of your vi
 
 1. Use the **virsh start** command to launch all the VMs (**deb1**, **deb2**, and **deb3**).
 2. Inside each virtual machine, run `ip a` on the command line. Open a Terminal window in deb1 to do so. You'll need the IP address of each machine for the next steps.
-3. Switch to your **debhost** VM, open a terminal, and change directory to **~/bin**.
+3. Switch to your **debhost**, open a terminal, and change directory to **~/bin**.
 4. Issue the command:
 
 ```bash
