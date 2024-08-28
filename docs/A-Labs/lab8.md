@@ -79,7 +79,7 @@ The term **DORA** best describes how DHCP Works:
 
 **Perform the following steps:**
 
-1. Launch your debhost machine and your deb3 VM.
+1. Launch your  machine and your deb3 VM.
 2. Switch to your **deb3** VM and start a sudo shell.
 
    - The version of DHCP server that comes with Debian is maintained and distributed by the **Internet Software Consortium** (https://www.isc.org/). The source package that you can download from ISC includes not only the DHCP server, but also a DHCP client and a DHCP relay agent. Debian separates it into two .deb packages: the **isc-dhcp-client** package and the **isc-dhcp-server** package. The client package is installed by default by the workstation installation.
@@ -192,7 +192,7 @@ Before attempting to start the service, in another terminal, monitor the system 
 
 If there are any errors in the **dhcp.conf** file when you start the service they will be recorded in the system journal.
 
-7. Open another terminal window (**Tip**: **ssh** into your **deb3** VM from your **debhost** and start a sudo shell) and issue the following command:
+7. Open another terminal window (**Tip**: **ssh** into your **deb3** VM from your **** and start a sudo shell) and issue the following command:
 
 ```bash
 # Monitor system journal in real time
@@ -253,7 +253,7 @@ Recall that the initial DHCP lease transaction consists of 4 broadcast packets, 
 **Perform the following steps:**
 
 1. Use your **deb1** and **deb3** VMs for this section.
-2. Connect to **deb3** via ssh from **debhost** and monitor the journal
+2. Connect to **deb3** via ssh from **** and monitor the journal
 
 ```bash
 # Monitor journal for dhcp entries
@@ -373,7 +373,7 @@ If you have successfully completed this lab, make a new backup of your virtual m
 **Perform the Following Steps:**
 
 1. Make certain ALL of your **deb1** and **deb3** VMs are running.
-2. Switch to your **debhost** VM and change to your user's **bin** directory.
+2. Switch to your **debhost** and change to your user's **bin** directory.
 3. Issue the Linux command:
 
 ```bash
