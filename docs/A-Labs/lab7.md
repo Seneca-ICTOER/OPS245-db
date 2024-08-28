@@ -74,7 +74,7 @@ In this section, you will learn how to configure an SSH server and restart the s
 
 Some tasks in this part of the investigation **require you to be connected to Seneca's VPN**.
 
-- If you are running your installation through VMWare, then you can use the [instructions provided by ITS](https://students.senecapolytechnic.ca/spaces/186/it-services/wiki/view/1025/student-vpn) to connect to it from your Windows machine (your debhost and its nested VMs will use the VPN through the windows machine without further configuration).
+- If you are running your installation through VMWare, then you can use the [instructions provided by ITS](https://students.senecapolytechnic.ca/spaces/186/it-services/wiki/view/1025/student-vpn) to connect to it from your Windows machine (your debhost and its VMs will use the VPN through the windows machine without further configuration).
 - If you installed your debhost **directly onto a machine without using VMWare** as an intermediary (or the steps above do not work for you), use the following instructions:
 
   - Install the package openconnect
@@ -86,7 +86,7 @@ Some tasks in this part of the investigation **require you to be connected to Se
 Once you have connected to the VPN with either method you may continue
 
 1. Launch your **debhost machine** and your **deb1** and **deb3** VMs.
-2. Switch to your **debhost** VM.
+2. Switch to your **debhost**.
 3. Create a file in your current directory of your debhost machine with some text in it called: **myfile.txt**
 4. Issue the following command (using your Matrix login id):
 
@@ -192,15 +192,15 @@ The Linux system administrator can **configure the SSH server** in order to make
 systemctl restart ssh
 ```
 
-9. Try using ssh from your **debhost** VM to your **deb1** VM as **root**. Where you successful?
-10. Try using ssh from your **debhost** VM to your **deb1** VM as your regular user account. Did it work?
+9. Try using ssh from your **debhost** to your **deb1** VM as **root**. Where you successful?
+10. Try using ssh from your **debhost** to your **deb1** VM as your regular user account. Did it work?
 11. Create another user on deb1 called **other**, include the options to create a home directory and set the shell to **/bin/bash**
 12. Set the password for the newly-created user called **other**
-13. Try using ssh from your **debhost** VM to your **deb1** VM as the account called **other**. Why didn't it work?
+13. Try using ssh from your **debhost** to your **deb1** VM as the account called **other**. Why didn't it work?
 14. On **deb1** add the user **other** to the supplemental group **sudo**.
 15. Edit the file **/etc/ssh/sshd_config** and add a new option of `AllowGroups sudo`
 16. Comment out the `AllowUsers` option, save the file, and **restart ssh**
-17. Try using ssh from your **debhost** VM to your **deb1** VM as the user account called **other**. Did it work this time?
+17. Try using ssh from your **debhost** to your **deb1** VM as the user account called **other**. Did it work this time?
 
 **Monitoring access**
 
@@ -374,8 +374,8 @@ You can use an SSH tunnel with options to allow running of applications on remot
 
 **Perform the following steps:**
 
-1. For this section, you will be using your **debhost** and **deb1** VMs.
-2. Switch to your debhost VM, open a terminal and remain logged in as a regular user.
+1. For this section, you will be using your **debhost** and your **deb1** VM.
+2. Switch to your debhost, open a terminal and remain logged in as a regular user.
 3. Issue the following command to connect to your **deb1** VM:
 
 ```bash
@@ -385,7 +385,7 @@ ssh -X -C username@deb1
 - (The **-X** option enables the forwarding of X window information, and the **-C** option enables compression for better performance).
 
 4. Once the connection is properly established, run the command `gedit`
-5. The _gedit_ window will display on your **debhost** VM, but in reality, this application is running on your **deb1** VM!
+5. The _gedit_ window will display on your **debhost**, but in reality, this application is running on your **deb1** VM!
 6. Enter some text and save the file as **testfile**
 7. Exit the **gedit** application.
 8. On which host was the file saved? **debhost** or **deb1** What does that tell you about the use of tunneling for this section?
@@ -668,7 +668,7 @@ If you have successfully completed this lab, make a new backup of your virtual m
 
 1. Make certain ALL of your VMs are running.
 2. Make sure you are connected to Seneca's VPN on your Windows host.
-3. Switch to your **debhost** VM and change to your user's **bin** directory.
+3. Switch to your **debhost** and change to your user's **bin** directory.
 4. Issue the Linux command:
 
 ```bash
