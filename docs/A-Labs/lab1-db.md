@@ -372,7 +372,7 @@ The [Bash Shell Reference Guide](/C-ExtraResources/bash-shell-reference-guide.md
 
 You may have learned about creating and running Bash Shell Scripts in your ULI101 course. Shell scripts help Linux users and system administrators to automate repetitive tasks to become more efficient and to help them save time. We can take what we have learned from the commands above and put them into a bash script to generate information reports for your newly-installed Linux host machine.
 
-1. Create a new file in your **~/bin** directory called **myreport.bash**
+1. Create a new directory called "bin" in your home directory (~/bin) and then create a new file in your **~/bin** directory called **myreport.bash**
 2. Populate the beginning of the file with sh-bang line and block comment describing what this script does:
 
 ```bash
