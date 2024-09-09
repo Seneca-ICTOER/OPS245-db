@@ -288,11 +288,9 @@ Using && as a separator between the 2 commands will cause the 2nd command to exe
 
 > ![caution](/img/caution.png)**It is ABSOLUTELY ESSENTIAL that you do NOT remove your SSD drive during your Debian 12 session.**
 >
-> You are required to correctly shutdown your Debian 12 host virtual machine as you would with any operating system.
+> You are required to correctly shutdown your Debian 12 host as you would with any operating system.
 >
-> Also, you are required to use the "Safely Remove Hardware"" and "Eject Media" tool in the system tray on your Windows machine to properly disconnect your SSD device.
->
-> **FAILURE TO DO THIS MAY DAMAGE YOUR HOST VM AND NOW ALLOW IT TO BOOT PROPERLY (YOU HAVE BEEN WARNED).**
+> **FAILURE TO DO THIS MAY DAMAGE YOUR HOST AND NOT ALLOW IT TO BOOT PROPERLY (YOU HAVE BEEN WARNED).**
 >
 > - Click on the power icon in the top right corner of the display and then click on the power icon again
 > - Click on Restart or Shutdown
