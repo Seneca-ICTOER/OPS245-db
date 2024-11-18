@@ -113,9 +113,9 @@ Click on the "User Support" link. Take a look at some of the support options ava
 
 1. Plug your installation USB flash drive and your SSD external hard drive into the Seneca lab computer
 2. Turn on the Seneca lab computer. You will need to hit the F12 key as soon as you turn it on until you see the following screen:
-> ![Bootable devices](/img/boot-select-ssd.jpg)
-3. **IT IS VERY IMPORTANT THAT YOU PERFORM THESE NEXT STEPS CAREFULLY!!** Notice that there are multiple boot options available to you. You should have 4 options. The Windows Boot Manager is built into the Seneca lab computer and is used for the built-in image that Seneca uses. **DO NOT TOUCH THE WINDOWS BOOT MANAGER**. The UEFI 2550Micron 512GB device is the built-in hard drive on the Seneca computers. We can tell it is the built-in hard drive because of the symbol to its left. Depending on the computer you are using, it's exact label may be different from what you see but the symbol will be the same. **DO NOT TOUCH THE INTERNAL HARD DRIVE**. Altering either of these may break the system and it is the student's responsibility to ensure that no damage comes to the Seneca computers. **YOU HAVE BEEN WARNED!**
-4. The other two devices you will see are your external SSD and your installation USB flash drive. At this time, we want to select our USB installation drive, not our external SSD yet. Your labels will likely be different from what you see in the image above but they will both have the USB symbol beside them as you can see beside my Sabrent and Generic Mass Storage devices. **Note:** In the image above, the installation USB flash drive is labeled as "Generic Mass Storage". The external SSD in the image above is labeled as "SABRENT". This is not the SSD itself, rather it is the label for the SATA-to-USB connector that you are using. If you are unsure of which one is your installation USB flash drive, check your physical SATA-to-USB connector that connects your SSD to the Seneca lab computer. You will likely see its brand name somewhere on the connector. Look for that name in the boot list. Now you know which item is your external SSD. Make note of your external SSD label as you will need it later in this investigation. Since we are not trying to boot from the SSD yet, pick the other USB device at this point - your installation USB flash drive.
+> ![Bootable devices](/img/bootmenu1.jpg)
+3. **IT IS VERY IMPORTANT THAT YOU PERFORM THESE NEXT STEPS CAREFULLY!!** Notice that there are multiple boot options available to you. You should have 3 options at first. The Windows Boot Manager is built into the Seneca lab computer and is used for the built-in image that Seneca uses. **DO NOT TOUCH THE WINDOWS BOOT MANAGER**. The UEFI 2550Micron 512GB device is the built-in hard drive on the Seneca computers. We can tell it is the built-in hard drive because of the symbol to its left. Depending on the computer you are using, it's exact label may be different from what you see but the symbol will be the same. **DO NOT TOUCH THE INTERNAL HARD DRIVE**. Altering either of these may break the system and it is the student's responsibility to ensure that no damage comes to the Seneca computers. **YOU HAVE BEEN WARNED!**
+4. The other device you will see is your installation USB flash drive. The image above shows it labeled as "UEFI Kingston DataTraveler" but yours will be something different. Select your USB installation drive. 
 5. Upon selecting your installation USB flash drive you will be asked for an admin password. Provide the password and press "OK". **Note** Your professor will give you the password on the first day of class.
 6. If you created your installation USB flash drive correctly, the Seneca Lab computer will boot to it and eventually you will see the following screen:
 > ![advanced options](/img/boot-select-advanced.jpg)
@@ -184,9 +184,16 @@ Click on the "User Support" link. Take a look at some of the support options ava
 66. For "Is the system clock set to UTC?" select "Yes" and click "Continue".
 67. Your system will now complete the installation and ask to reboot. Click "Continue" to reboot.
 
-When it reboots, be prepared to bring up the boot menu again, just like you did in step 2. This time, however, you will select your external SSD from the list of bootable drives. Put in the admin password when prompted and your new Debian install will load up.
+When it reboots, be prepared to bring up the boot menu again, just like you did in step 2. Now your boot menu should have 4 items:
+> ![bootmenuafterinstall](/img/bootmenu2.jpg)
 
-When the system reboots you will be presented with a graphical login screen. Select your username enter your password
+Because you installed Debian to your external SSD, it now shows up as a bootable item on this boot menu. 
+
+**Note:** In the image above, the installation USB flash drive is labeled as "UEFI Kingston DataTraveler". The external SSD in the image above is labeled as "SABRENT". This is not the SSD itself, rather it is the label for the SATA-to-USB connector that you are using. If you are unsure of which one is your installation USB flash drive, check your physical SATA-to-USB connector that connects your SSD to the Seneca lab computer. You will likely see its brand name somewhere on the connector. Look for that name in the boot list. Now you know which item is your external SSD.
+
+Now, select your external SSD from the list of bootable drives. Put in the admin password when prompted and your new Debian install will load up.
+
+When the system boots up you will be presented with a graphical login screen. Select your username enter your password
 
 Then you will be presented with the "Welcome" application
 - "Next" for English
